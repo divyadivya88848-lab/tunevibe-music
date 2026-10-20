@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TuneWave - Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .auth-box {
+      max-width: 400px;
+      margin: 35px auto;
+      padding: 25px;
+      background: #191522;
+      border: 1px solid #49345e;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .auth-box h2 {
+      color: #c084fc;
+      margin-bottom: 10px;
+    }
+
+    .auth-box input {
+      width: 100%;
+      padding: 13px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #49345e;
+      background: #0b0b12;
+      color: white;
+    }
+
+    .auth-box button {
+      width: 100%;
+      padding: 13px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #8b3fd1;
+      color: white;
+    }
+
+    .auth-box a {
+      color: #c084fc;
+    }
+
+    .auth-box p {
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎵 TuneWave</h1>
+    <p>Your Music, Your Mood</p>
+  </header>
+
+  <section class="auth-box">
+    <h2>Create Account</h2>
+    <p>Join TuneWave and enjoy your music! 🎧</p>
+
+    <form id="signupForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Create Password"
+             minlength="6" required>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account?</p>
+    <a href="login.html">Login Here</a>
+
+    <p><a href="index.html">← Back to Home</a></p>
+  </section>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Sign Up demo completed! Real account creation is not connected yet.");
+    });
+  </script>
+
+</body>
+</html>

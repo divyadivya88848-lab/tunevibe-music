@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TuneWave - Music Streaming</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎵 TuneWave</h1>
+    
+<a href="login.html" style="display:inline-block; background:#8b3fd1; color:white; padding:10px 18px; border-radius:20px; text-decoration:none; margin:10px;">
+  🔐 Login
+</a>
+
+<a href="signup.html" style="display:inline-block; background:#d946ef; color:white; padding:10px 18px; border-radius:20px; text-decoration:none; margin:10px;">
+  ✨ Sign Up
+</a>
+
+    <button id="themeButton" onclick="toggleTheme()">☀️ Light Mode</button>
+    <p>Your Music, Your Mood</p>
+  </header>
+
+  <main>
+      
+<section class="welcome">
+  <h2>Welcome to TuneWave 🎧</h2>
+  <p>Discover your favourite music, feel every beat!</p>
+  <p>🎶 Music for every mood, every moment.</p>
+</section>
+
+    <input type="text" id="search"
+      placeholder="Search songs...">
+
+<section class="recent-section">
+  <h2>🕘 Recently Played</h2>
+  <p id="recentSong">No songs played yet</p>
+</section>
+
+    <h2>Popular Songs</h2>
+    
+<p id="songCount">🎵 Total Songs: 4</p>
+
+    
+<div class="categories">
+  <button onclick="filterSongs('all')">All</button>
+  <button onclick="filterSongs('melody')">Melody</button>
+  <button onclick="filterSongs('love')">Love</button>
+  <button onclick="filterSongs('trending')">Trending</button>
+</div>
+
+    
+
+
+    <div class="song-list" id="songList">
+      <div class="song">
+        <img
+  class="album-cover"
+  src="https://placehold.co/100x100/28163d/ffffff?text=Music"
+  alt="Song cover">
+        <div>
+          <h3>Shape of You</h3>
+          <p>Ed Sheeran</p>
+        </div>
+        <button onclick="playSong('Shape of You')">▶ Play</button>
+<button onclick="toggleFavorite(this)">🤍</button>
+      </div>
+
+      <div class="song">
+        <img
+  class="album-cover"
+  src="https://placehold.co/100x100/5b2c83/ffffff?text=Perfect"
+  alt="Perfect album cover">
+        <div>
+          <h3>Perfect</h3>
+          <p>Ed Sheeran</p>
+        </div>
+        <button onclick="playSong('Perfect')">Play</button>
+        <button onclick="toggleFavorite(this)">🤍</button>
+      </div>
+
+      <div class="song">
+        <img class="album-cover"
+src="https://placehold.co/100x100/263b73/ffffff?text=Kolaveri"
+alt="Kolaveri album cover">
+        <div>
+          <h3>Why This Kolaveri</h3>
+          <p>Dhanush</p>
+        </div>
+        <button onclick="playSong('Why This Kolaveri')">Play</button>
+        <button onclick="toggleFavorite(this)">🤍</button>
+      </div>
+
+      <div class="song">
+        <img class="album-cover"
+src="https://placehold.co/100x100/873d68/ffffff?text=Kuthu"
+alt="Arabic Kuthu album cover">
+        <div>
+          <h3>Arabic Kuthu</h3>
+          <p>Anirudh</p>
+        </div>
+        <button onclick="playSong('Arabic Kuthu')">Play</button>
+        <button onclick="toggleFavorite(this)">🤍</button>
+      </div>
+    </div>
+
+    
+<section class="liked-section">
+  <h2>❤️ Liked Songs</h2>
+  <div id="likedSongs">
+    <p>No liked songs yet.</p>
+  </div>
+</section>
+
+<section class="player">
+  <p>NOW PLAYING 🎵</p>
+  <h3 id="currentSong">Select a song</h3>
+
+  <audio id="audioPlayer" controls>
+    Your browser does not support audio.
+  </audio>
+
+  <br><br>
+  <button onclick="previousSong()">⏮ Previous</button>
+<button onclick="nextSong()">Next ⏭</button>
+</section>
+  </main>
+
+  <footer>
+    <p>© 2026 TuneWave Music</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
